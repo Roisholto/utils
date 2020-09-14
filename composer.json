@@ -1,0 +1,20 @@
+{
+    "name": "roi/utils",
+    "description": "library containing utility classes i use often",
+    "type": "library",
+    "require": {
+        "opis/json-schema": "^1.0",
+        "m1x0n/opis-json-schema-error-presenter": "^0.5.2",
+        "giggsey/libphonenumber-for-php": "^8.12"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roisholto",
+            "email": "roisoetan@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Roi\\Utils\\": "src/"}
+    }
+}

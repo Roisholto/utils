@@ -1,0 +1,17 @@
+{
+  "type":"object",
+  "properties":{
+    "name":{
+      "type":"string"
+    },
+    "phone":{
+      "type":"string",
+      "format":"phone-number"
+    },
+    "competition_round_id":{
+      "type":"integer",
+      "minimum":0
+    }
+  },
+  "required":["name", "phone", "competition_round_id"]
+}
