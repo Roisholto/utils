@@ -30,8 +30,12 @@ public static function parseSearch()
 		$clause = self::multi_to_assoc($clause) ;
 
 	return [
-			'cols'=>$cols, 'clause'=>$clause, 'pagination'=> $pagination,
-			'groupby'=>$groupby, 'order_by'=>$order_by, 'order_direction'=> $order_direction
+			'cols'=>$cols,
+			'clause'=>$clause,
+			'pagination'=> $pagination,
+			'groupby'=>$groupby,
+			'order_by'=>$order_by,
+			'order_direction'=> $order_direction,
 			'all'=>$_GET
 			] ;
 	}
