@@ -39,7 +39,7 @@ class JsonValidator {
 
   // add format to validator ;
   public static function setFormat(Validator $Validator){
-    $Validator->setFormats($this->formats) ;
+    $Validator->setFormats(self::getInstance()->formats) ;
     return $Validator ;
   }
 
