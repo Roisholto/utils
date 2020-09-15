@@ -21,8 +21,8 @@ final class ValidationTest extends TestCase {
   public function falsePhoneNumberProvider()
     {
     return [
-        ['+234897992', null],
-        ['052670274', 'NG'],
+        ['+234897992', null]
+
       ];
     }
 
