@@ -9,6 +9,7 @@ class Response {
   const DATA_ERROR = '01' ;
   const SUCCESS = '1' ;
   const SCHEMA_ERROR = '011' ;
+  const NOT_FOUND = '00' ;
 
   const STATUS_TYPES = [
     '1'=>'success',
@@ -16,7 +17,8 @@ class Response {
     '02'=>'processError',
     '03'=>'serviceError',
     '04'=>'unknown',
-    '011'=>'schemaError'
+    '011'=>'schemaError',
+    '00'=>'notFound' // usually when resource id not found ;
     ] ;
 
   private static function isDev() {
@@ -30,11 +32,12 @@ class Response {
   		$rs = [] ;
   		if($status === '1')
   			{
-  			$rs['succ'] = 1 ;
+  			$rs['status'] = 1 ;
   			$rs['message'] = $message ;
   			}
   		else
   			{
+        $rs['status'] = 0 ;  
   			$rs['error'] = self::STATUS_TYPES[$status] ;
   			$rs['description'] = $message ;
   			}
