@@ -38,13 +38,13 @@ class JsonValidator {
     }
 
   // add format to validator ;
-  function setFormat(Validator $Validator){
+  public static function setFormat(Validator $Validator){
     $Validator->setFormats($this->formats) ;
     return $Validator ;
   }
 
   // get validation error ;
-  function getError(ValidationResult $result) {
+  public static function getError(ValidationResult $result) {
     return JsonSchemaError::get($result) ;
   }
 
