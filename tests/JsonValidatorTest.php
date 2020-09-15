@@ -22,7 +22,7 @@ final class JsonValidatorTest extends TestCase {
       {
       $this->assertFalse($result->isValid()) ;
       $error = \Roi\Utils\JsonValidator::getInstance()->getError($result) ;
-      print_r($error) ;
+      // print_r($error) ;
       $this->assertIsArray($error) ;
       }
 
